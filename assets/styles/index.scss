@@ -1,0 +1,103 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+p, a, h1, h2, h3, h4, div, span {
+  color: #f1f1f2;
+}
+
+h1 ,h3 ,h4, h5  {
+  background-image: linear-gradient(120deg, #00c3f5, #71E0FA);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Скрывает фактический цвет текста */
+}
+
+h1 ,h3 ,h4, h5 + p {
+  margin-bottom: 1em;
+}
+
+h2{
+  font-family: "Roboto", sans-serif;
+  color: #00c3f5;
+  text-indent: 10px;
+  
+  span {
+    font-family: "Roboto", sans-serif;
+    color: #f1f1f2;
+  }
+}
+
+.endh {
+  text-align: end;
+  color: #00c3f5;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+h3, h4 {
+  text-align: left;
+}
+
+::selection {
+  background-color: #00c3f5; /* Цвет фона при выделении текста */
+  color: #333; /* Цвет текста при выделении */
+}
+
+// Переменная для цвета фона body
+$background: #0d121c; // значение по умолчанию
+
+// Применяем переменную к body
+body {
+  background: var(--background, $background);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00c3f5;
+}
+
+:hover{
+  transition: .3s;
+}
+
+hr {
+  margin: 0 1em;
+  color: #2f2f2f80;
+}
+
+
+
+.line {
+  // margin: 2em auto;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, #00c3f505, #00c3f550, #00c3f505);
+  border-image-slice: 1;
+}
+
+button + button {
+  margin: 0 2em;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nanum+Myeongjo&display=swap" rel="stylesheet');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nanum+Myeongjo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet');
