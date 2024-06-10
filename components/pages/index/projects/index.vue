@@ -28,7 +28,7 @@
       <!-- Перебор проектов и создание слайдов -->
       <swiper-slide v-for="(project, index) in projects" :key="index">
         <!-- Компонент карточки проекта -->
-        <UICart
+        <PagesIndexProjectsCart
           class="cart"
           :class="{ left: isLeft(index), right: isRight(index) }"
           :title="project.title"
@@ -38,7 +38,7 @@
         >
           <!-- Перебор тегов проекта и создание кнопок тегов -->
           <UITeg v-for="(tag, i) in project.tags" :key="i" :buttonText="tag" />
-        </UICart>
+        </PagesIndexProjectsCart>
       </swiper-slide>
     </swiper>
   </UXContainer>

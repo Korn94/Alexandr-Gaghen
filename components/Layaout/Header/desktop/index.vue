@@ -12,6 +12,9 @@
       <div @click="toggleTheme">
         <Icon :name="darkTheme ? 'meteocons:dust-day-fill' : 'meteocons:clear-night-fill'" size="24px"></Icon>
       </div>
+      <div v-if="showDropdown" class="dropdown">
+        Извините, пока еще не придумал дизайн для светлой темы.
+      </div>
       <hr>
       <div class="social-icons">
         <NuxtLink href="https://www.instagram.com/alexandr_gaghen/" target="_blank"><Icon name="bxl:instagram" size="24px" /></NuxtLink>
@@ -30,21 +33,31 @@ export default {
   data() {
     return {
       darkTheme: true, // начальное состояние - темная тема
+      showDropdown: false, // состояние для отображения выпадающего окна
     };
   },
-  methods: {
+    methods: {
     toggleTheme() {
-      this.darkTheme = !this.darkTheme; // изменяем текущую тему при каждом вызове
+      this.showDropdown = true; // показываем выпадающее окно
+      setTimeout(() => {
+        this.showDropdown = false; // скрываем выпадающее окно через 3 секунды
+      }, 3000);
     },
-  },
-  watch: {
-    darkTheme(newVal) {
-      // Изменяем переменную CSS в зависимости от текущей темы
-      document.documentElement.style.setProperty(
-        "--background",
-        newVal ? "#0d121c" : "linear-gradient(to right, #4d4f54, #7c8088)"
-      );
-    },
+
+    // Смена цветовой темы
+  // methods: {
+  //   toggleTheme() {
+  //     this.darkTheme = !this.darkTheme; // изменяем текущую тему при каждом вызове
+  //   },
+  // },
+  // watch: {
+  //   darkTheme(newVal) {
+  //     // Изменяем переменную CSS в зависимости от текущей темы
+  //     document.documentElement.style.setProperty(
+  //       "--background",
+  //       newVal ? "#0d121c" : "linear-gradient(to right, #4d4f54, #7c8088)"
+  //     );
+  //   },
   },
 };
 </script>
@@ -92,7 +105,7 @@ export default {
         span {
           color: $blue;
         }
-        
+
         ul {
           display: none;
           position: absolute;
@@ -105,14 +118,13 @@ export default {
         ul li {
           padding: 10px;
         }
-        
+
         a {
           text-decoration: none;
           padding: 14px 0px;
           position: relative;
-          
         }
-          
+
         a::after {
           content: "";
           position: absolute;
@@ -137,8 +149,30 @@ export default {
     width: 250px;
     display: flex;
     justify-content: center;
-    // border: 1px solid red;
+    position: relative;
     cursor: pointer;
+
+    .dropdown {
+      position: absolute;
+      top: 50px;
+      left: 10%;
+      transform: translateX(-50%);
+      border: 1px solid $blue50;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $blue transparent;
+      }
+    }
 
     .social-icons {
       a {

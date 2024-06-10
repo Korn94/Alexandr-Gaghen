@@ -1,3 +1,4 @@
+<!-- Используется на страницах проектов, вскоре переедет туда, если больше нигде не будет использоваться - components\pages\index\projects -->
 <template>
   <div :class="colorClass">
     <p>{{ text }}</p>
