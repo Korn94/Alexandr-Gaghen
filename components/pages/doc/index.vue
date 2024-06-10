@@ -5,23 +5,29 @@
       <div class="grid">
         <PagesDocButtonCart title="Навыки">
           <p>Здесь я представлю список моих основных навыков в области веб-разработки, включая знание языков программирования, фреймворков и инструментов разработки.</p>
-          <router-link to="/">
-            <UIButton buttonText="Перейти" width="100%"><Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" /></UIButton>
+          <router-link to="/doc/naviki">
+            <UIButton buttonText="Перейти" width="100%">
+              <Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" />
+            </UIButton>
           </router-link>
         </PagesDocButtonCart>
   
         <PagesDocButtonCart title="Для HR и ЛПР">
           <p>В этом разделе я собрал ответы на часто задаваемые вопросы, которые могут быть полезны HR-специалистам и руководителям проектов.</p>
-          <router-link to="/">
-            <UIButton buttonText="Перейти" width="100%"><Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" /></UIButton>
-          </router-link>
+          <!-- <router-link to="/"> -->
+            <UIButton buttonText="В разработке..." color="grey" width="100%" />
+              <!-- <Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" /> -->
+            <!-- </UIButton> -->
+          <!-- </router-link> -->
         </PagesDocButtonCart>
         
         <PagesDocButtonCart title="UI / UX">
           <p>Здесь я представлю некоторые из моих работ по созданию пользовательских интерфейсов.</p>
-          <router-link to="/">
-            <UIButton buttonText="Перейти" width="100%"><Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" /></UIButton>
-          </router-link>
+          <!-- <router-link to="/"> -->
+            <UIButton buttonText="В разработке..." color="grey" width="100%" />
+              <!-- <Icon name="line-md:arrow-small-right" size="16px" style="margin-left: 1em;" /> -->
+            <!-- </UIButton> -->
+          <!-- </router-link> -->
         </PagesDocButtonCart>
       </div>
     </div>

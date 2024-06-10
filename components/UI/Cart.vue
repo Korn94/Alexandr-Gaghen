@@ -6,7 +6,7 @@
           <h3>{{ title }}</h3>
           <Icon class="ico" name="mdi:arrow-right-bold" style="color: #00c3f540" />
         </div>
-        <p>Проектирование и разработка</p>
+        <p>{{ role }}</p>
         <br />
         <div class="box-img">
           <img :src="img" alt="" />
@@ -23,6 +23,7 @@
 export default {
   props: {
     title: String,
+    role: String,
     img: String,
     link: String,
   },

@@ -18,7 +18,7 @@ export default {
     // Заголовок для раздела FAQ
     title: {
       type: String,
-      default: "Часто задаваемые вопросы"
+      default: ""
     },
     // Массив данных о FAQ
     faqsData: {

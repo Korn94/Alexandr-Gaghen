@@ -5,6 +5,8 @@
       :style="{
         '--swiper-pagination-color': '#00c3f5', // Цвет активной точки слайда
         '--swiper-pagination-bullet-inactive-color': 'rgba(0, 195, 245, 0.8)', // Цвет неактивной точки
+        '--swiper-navigation-color': '#00c3f5', // Цвет стрелок навигации
+        '--swiper-navigation-size': '20px', // Размер стрелок навигации
       }"
       :slides-per-view="2"
       :breakpoints="{
@@ -18,6 +20,7 @@
       :pagination="{
         dynamicBullets: true,
       }"
+      :navigation="true"
       :modules="modules"
       class="mySwiper"
       @slideChange="onSlideChange"
@@ -29,6 +32,7 @@
           class="cart"
           :class="{ left: isLeft(index), right: isRight(index) }"
           :title="project.title"
+          :role="project.role"
           :img="project.img"
           :link="project.link"
         >
@@ -46,6 +50,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 export default {
   components: {
@@ -57,21 +62,24 @@ export default {
     const projects = ref([
       {
         title: 'Данный сайт',
+        role: 'Разработчик и Дизайнер',
         img: '/projects/portfolio/screen.png',
         link: '/portfolio',
         tags: ['Nuxt', 'Scss', 'GitHub'],
       },
       {
         title: 'ItGlav',
+        role: 'Проектирование и разработка',
         img: '/projects/itglav/screen.png',
         link: '/itglav',
         tags: ['Nuxt', 'SSR', 'Css', 'Axios'],
       },
       {
-        title: 'ItGlav',
-        img: '/projects/itglav/screen.png',
-        link: '/itglav',
-        tags: ['Nuxt', 'SSR', 'Css', 'Axios'],
+        title: 'Nikas-Trans',
+        role: 'Frontend-разработчик',
+        img: '/projects/nikas-trans/screen.png',
+        link: '/nikas-trans',
+        tags: ['Nuxt', 'Scss', 'Axios'],
       },
     ]);
 
@@ -96,7 +104,7 @@ export default {
     };
 
     return {
-      modules: [Pagination],
+      modules: [Pagination, Navigation],
       projects,
       currentIndex,
       onSlideChange,

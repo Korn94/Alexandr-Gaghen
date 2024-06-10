@@ -1,3 +1,5 @@
+// Форматирование номера телефона
+
 import { defineNuxtPlugin } from '#app'
 import phoneFormat from '~/directives/phoneFormat.js'
 

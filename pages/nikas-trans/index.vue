@@ -1,0 +1,3 @@
+<template>
+  <PagesIndexProjectsNikas-Trans />
+</template>

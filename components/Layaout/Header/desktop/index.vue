@@ -118,7 +118,6 @@ export default {
           position: absolute;
           bottom: 0;
           left: 50%;
-          margin: -2px;
           height: 1px;
           width: 0%;
           background: $blue;
@@ -127,7 +126,6 @@ export default {
 
         a:hover::after {
           width: 100%;
-          margin: -2px;
           left: 3%;
           background: $blue;
         }

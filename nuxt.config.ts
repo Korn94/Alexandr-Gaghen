@@ -35,16 +35,28 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ru',
       },
+      title: 'Портфолио - Александр Гаген',
       meta: [
         {
           name: 'description',
-          content: '',
+          content: 'Портфолио Александра Гагена - фронтенд-разработчик с навыками работы с Vue, Nuxt и другими инструментами. Создание адаптивных и SEO-оптимизированных веб-приложений.'
+        },
+        {
+          name: 'keywords',
+          content: 'Vue, Nuxt, Frontend разработчик, SSR, SEO, веб-разработка, создание веб-приложений, анимация интерфейсов, оптимизация сайтов, адаптивная верстка, компонентный подход, разработка с нуля, работа с базами данных'
         },
         { charset: 'utf-8' },
         {
           name: 'viewport',
-          content:
-            'width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0',
+          content: 'width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0',
+        },
+        {
+          name: 'author',
+          content: 'Александр Гаген'
+        },
+        {
+          name: 'robots',
+          content: 'index, follow'
         },
       ],
       link: [
@@ -56,4 +68,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  
 })

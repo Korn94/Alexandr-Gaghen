@@ -3,23 +3,20 @@
     <!-- <h2>.about<span> (alex)</span></h2> -->
     <h2>$ {<span> Обо мне </span>}</h2>
       <div class="content">
-        <PagesIndexAboutFoto />
+        <div><PagesIndexAboutFoto /></div>
         <hr>
         <div>
           <h3>Краткая информация</h3>
-          <p>Работаю Frontend разработчиком, в основном во Vue/Nuxt. В 2021 году сменил сферу деятельности - перешел в IT.</p>
+          <p>Работаю Frontend разработчиком, в основном во Vue/Nuxt. <br>В IT сфере с 2021.</p>
           <p>Изначально путь начался с маркетинговой компании, где, в том числе, получил базовые знания в веб-разработке, а так же понял основные принципы коммерческой разработки. Не стою на месте, постоянно изучаю новые технологии, методы, инструменты и оттачиваю имеющиеся навыки.</p>
           <p>Cтремлюсь делать сложное простым и понятным, а также оставлять после себя четкий и понятный код для комфортной работы коллег и последующего обслуживания проектов.</p>
           <div class="flex">
-            <UITeg buttonText="30 лет">
-              <Icon class="ico" name="ep:avatar" />
-            </UITeg>
-            <UITeg buttonText="Общий опыт 3 года">
-              <Icon class="ico" name="icomoon-free:books" />
-            </UITeg>
-            <UITeg buttonText="ПМР">
-              <Icon class="ico" style="color: red;" name="mdi:location" />
-            </UITeg>
+            <UITeg buttonText="# 30 лет" />
+            <UITeg buttonText="# Общий опыт 3 года" />
+            <UITeg buttonText="# Командный игрок" />
+            <UITeg buttonText="# Саморганизовован " />
+            <UITeg buttonText="# Самостоятелен" />
+            <UITeg buttonText="# Слушаю и слышу" />
           </div>
         </div>
       </div>
@@ -53,6 +50,7 @@
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 
   .UITeg {
     margin: 0 1em;
