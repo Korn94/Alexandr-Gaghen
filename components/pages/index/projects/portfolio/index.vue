@@ -27,19 +27,49 @@
       <div class="container__text">
         <h3>Проблемы и задачи, с которыми столкнулся и их решение</h3>
         <UISolution text="Задача №1" color="red" />
-        <p>Проект был без макета, не было понимания, как это вообще должно выглядеть в конечном виде.</p>
+        <p class="container__text-title">
+          При создании портфолио было сложно определить, какие разделы будут наиболее важными для потенциальных работодателей и как структурировать информацию, чтобы она была понятной и доступной.
+        </p>
         <UISolution text="Решение" color="green" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>
-        <hr>
-        <UISolution text="Проблема №2" color="red" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>
+        <p>
+          Текстовая составляеющая моя не сильная сторона, обдумывание и написание текстов у меня всегда занимает какое-то время. Так же было не совсем ясно что именно будет интересно и на что стоит уделить больше внимания.
+        </p>
+        <hr class="line">
+        <UISolution text="Задача №2" color="red" />
+        <p class="container__text-title">
+          Трудности в создании дизайна, который бы выделялся среди других портфолио и одновременно был профессиональным и соответствовал современным тенденциям веб-дизайна.
+        </p>
         <UISolution text="Решение" color="green" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>
-        <hr>
+        <p>
+          1
+        </p>
+        <hr class="line">
         <UISolution text="Проблема №3" color="red" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>
+        <p class="container__text-title">
+          Обдумывание и написание текстов всегда занимало у меня много времени, так как текстовая составляющая не является моей сильной стороной.
+        </p>
         <UISolution text="Решение" color="green" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>
+        <p>
+          Я решил использовать простой и ясный язык, избегая сложных конструкций и лишней информации.
+        </p>
+        <hr class="line">
+        <UISolution text="Проблема №3" color="red" />
+        <p class="container__text-title">
+          Было неясно на какие аспекты стоит уделить больше внимания.
+        </p>
+        <UISolution text="Решение" color="green" />
+        <p>
+          1
+        </p>
+        <hr class="line">
+        <UISolution text="Проблема №3" color="red" />
+        <p class="container__text-title">
+          Хотелось придать дизайну легкость и ненавязчивость, при этом чтобы он выглядел современно и уникально.
+        </p>
+        <UISolution text="Решение" color="green" />
+        <p>
+          1.
+        </p>
       </div>
     </BlockAnimator>
   </div>
@@ -51,6 +81,10 @@
   text-align: center;
   max-width: 1000px;
   margin: 4em auto auto;
+
+  hr {
+    margin: 2em 0;
+  }
 
   .box-img {
     background-color: #00c3f520;
@@ -93,6 +127,11 @@
         margin: 1em;
       }
     }
+
+  }
+
+  &__text-title {
+    font-weight: 500;
   }
 }
 </style>
