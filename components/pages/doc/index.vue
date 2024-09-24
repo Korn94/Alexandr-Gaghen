@@ -58,4 +58,11 @@
     margin-bottom: 1em;
   }
 }
+
+@media screen and (max-width: 840px) {
+  .content .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

@@ -15,7 +15,6 @@
         <!-- <p>Данный сайт имеет огрехи с точки зрения </p> -->
         <h3>Итоги, которые получились за время работы</h3>
         <p>Новый сайт. В данное время проект стоит на паузе.</p>
-        <p>Проект разработан одним человеком</p>
         <h3>Продукт</h3>
         <!-- <p>Изначальная идея была в продаже готовых шаблонов сайтов, </p> -->
         <p>Изначально был лендинг по продаже шаблонов готовых сайтов. Дальше проект перерос в предоставление маркетинговых услуг и веб-разработки. Продажа шаблонов ушла на второй план.</p>
@@ -38,7 +37,7 @@
         <UISolution text="Проблема №1" color="red" />
         <p>Проект был без макета, не было понимания, как это вообще должно выглядеть в конечном виде.</p>
         <UISolution text="Решение" color="green" />
-        <p>Решение было подобрано </p>
+        <p>...</p>
         <hr>
         <UISolution text="Проблема №2" color="red" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, animi esse! Ea doloremque unde est odio repellat libero quod ullam, assumenda officia, veritatis inventore sed fuga! Assumenda corrupti explicabo non?</p>

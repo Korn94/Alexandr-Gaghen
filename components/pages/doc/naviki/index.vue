@@ -136,4 +136,11 @@
     margin-top: 1em;
   }
 }
+
+@media screen and (max-width: 840px) {
+  .contant {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

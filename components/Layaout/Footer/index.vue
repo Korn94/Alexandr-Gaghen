@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p class="container">2024</p>
+    <p class="container">© 2024</p>
   </footer>
 </template>
 

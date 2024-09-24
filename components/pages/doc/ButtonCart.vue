@@ -37,7 +37,12 @@ export default {
 
   .contant {
     padding: 1em;
+  }
+}
 
+@media screen and (max-width: 840px) {
+  .container {
+    margin: 1em auto;
   }
 }
 </style>
