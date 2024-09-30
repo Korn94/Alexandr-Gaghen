@@ -8,6 +8,7 @@
           <NuxtLink href="https://www.instagram.com/alexandr_gaghen/" target="_blank"><Icon name="bxl:instagram" size="24px" /></NuxtLink>
           <NuxtLink href="https://vk.com/gaghen" target="_blank"><Icon name="bxl:vk" size="24px" /></NuxtLink>
           <NuxtLink href="https://t.me/alexandr_gaghen" target="_blank"><Icon name="bxl:telegram" size="24px" /></NuxtLink>
+          <NuxtLink href="viber://add?number=37362013900" target="_blank"><Icon name="basil:viber-outline" size="24px" /></NuxtLink>
         </div>
         <h3>Почта</h3>
         <div class="block">

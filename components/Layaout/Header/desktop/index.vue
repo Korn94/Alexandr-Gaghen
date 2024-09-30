@@ -13,7 +13,7 @@
         <Icon :name="darkTheme ? 'meteocons:dust-day-fill' : 'meteocons:clear-night-fill'" size="24px"></Icon>
       </div>
       <div v-if="showDropdown" class="dropdown">
-        Извините, пока еще не придумал дизайн для светлой темы.
+        В разработке...
       </div>
       <hr>
       <div class="social-icons">

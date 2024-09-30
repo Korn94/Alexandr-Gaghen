@@ -5,6 +5,14 @@
         <span class="close" @click.stop="closeModal">&times;</span>
         <h2>Отправить сообщение</h2>
         <forms @formSubmitted="handleFormSubmitted" />
+        <hr class="line">
+        <h3>Связаться со мной в мессенджерах или соцсетях:</h3>
+        <div class="block">
+          <NuxtLink href="https://www.instagram.com/alexandr_gaghen/" target="_blank"><Icon name="bxl:instagram" size="24px" /></NuxtLink>
+          <NuxtLink href="https://vk.com/gaghen" target="_blank"><Icon name="bxl:vk" size="24px" /></NuxtLink>
+          <NuxtLink href="https://t.me/alexandr_gaghen" target="_blank"><Icon name="bxl:telegram" size="24px" /></NuxtLink>
+          <NuxtLink href="viber://add?number=37362013900" target="_blank"><Icon name="basil:viber-outline" size="24px" /></NuxtLink>
+        </div>
       </div>
     </div>
   </div>
@@ -45,6 +53,18 @@ export default {
     border: 1px solid #00c3f550;
     border-radius: 15px;
     max-width: 500px;
+
+    .line {
+      margin: 1em 0;
+    }
+
+    .block a {
+      margin-right: 1.5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   .close {

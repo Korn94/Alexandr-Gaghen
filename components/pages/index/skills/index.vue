@@ -59,6 +59,11 @@
     
     .block {
       margin: auto;
+      
+      & a {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     hr {

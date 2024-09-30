@@ -1,11 +1,13 @@
 <template>
   <h2>{{ title }}</h2>
   <div class="accordion">
-    <div class="accordion-item" v-for="(faq, index) in faqs" :key="index">
-      <div class="accordion-button" :id="'accordion-button-' + (index + 1)" :aria-expanded="faq.expanded" @click="toggleAccordion(index)">
-        <span class="accordion-title">{{ faq.question }}</span><span>{{ faq.date }}<Icon class="ico" :name="faq.expanded ? 'line-md:minus' : 'line-md:plus'" /></span>
+    <div class="item" v-for="(faq, index) in faqs" :key="index">
+      <div class="button" :id="'button-' + (index + 1)" :aria-expanded="faq.expanded" @click="toggleAccordion(index)">
+        <span class="title">{{ faq.question }}</span>
+        <hr class="line">
+        <p class="date">{{ faq.date }}<Icon class="ico" :name="faq.expanded ? 'line-md:minus' : 'line-md:plus'" /></p>
       </div>
-      <div class="accordion-content" :class="{ 'expanded': faq.expanded }">
+      <div class="content" :class="{ 'expanded': faq.expanded }">
         <slot :name="faq.slotName"></slot>
       </div>
     </div>
@@ -47,10 +49,9 @@ export default {
 };
 </script>
 
-
 <style scoped lang="scss">
 .accordion {
-  .accordion-item {
+  .item {
     border: 1px solid #00c3f550;
     margin: 10px 0;
     padding: 5px 40px;
@@ -63,16 +64,16 @@ export default {
     }
 
     &:last-child {
-      .accordion-content {
+      .content {
         border-bottom: none;
       }
     }
     /* Стилизация кнопки при раскрытии */
-    .accordion-button[aria-expanded="true"] {
+    .button[aria-expanded="true"] {
       border-bottom: 1px solid #00c3f550;
     }
   }
-  .accordion-button {
+  .button {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -81,20 +82,27 @@ export default {
     padding: 10px 0;
     cursor: pointer;
 
+    .line {
+      display: none;
+    }
+
     /* Стили при наведении и фокусировке на кнопке */
-
-
-    .accordion-title:hover {
+    .title:hover {
       color: #00c3f5;
     }
     
     .ico {
-      color: #00c3f5;
+      color: #fff;
       margin-left: 1em;
+    }
+
+    p {
+      font-size: 13px;
+      color: #00c3f5;
     }
   }
 
-  .accordion-content {
+  .content {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -106,6 +114,36 @@ export default {
     opacity: 1;
     max-height: 40em;
     padding: 1em;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .item {
+      position: relative;
+
+      .button {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .line {
+          display: block;
+          margin: 1em 0;
+        }
+
+        .ico {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .content {
+        overflow-y: auto; /* Включает горизонтальный скролл */
+      }
+    }
+  }
+
+  .expanded {
+    padding: .5em;
+    max-height: 30em;
   }
 }
 </style>
